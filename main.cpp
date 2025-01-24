@@ -3,8 +3,7 @@
 using namespace std;
 
 template<typename T>
-// const T / T const
-T min(T arr[], size_t size) {
+T min(const T *arr, size_t size) {
     T min = arr[0];
     for (size_t i = 0; i < size; i++){
         if (arr[i] < min) { min = arr[i]; }
@@ -13,16 +12,13 @@ T min(T arr[], size_t size) {
 }
 
 template<typename T>
-// const T / T const
-T max(T arr[], size_t size) {
+T max(const T *arr, size_t size) {
     T max = arr[0];
     for (size_t i = 0; i < size; i++){
         if (arr[i] > max) { max = arr[i]; }
     }
     return max;
 }
-
-
 
 int main(void) {
 
